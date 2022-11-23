@@ -60,4 +60,26 @@ Given an array nums of n integers where nums[i] is in the range [1, n], return a
 ```
 In order to reduce space consumption, duplicates are removed at first using set() function. 
 
+## 4. Valid Palindrome
 
+Question: Given a string s, return true if it is a palindrome, or false otherwise.
+
+```bash
+  class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        left = 0
+        right = len(s)- 1
+        while right > left:
+            if not s[right].isalnum():
+                right = right - 1
+                continue
+            if not s[left].isalnum():
+                left = left + 1
+                continue
+            if s[left].lower() != s[right].lower():
+                return False
+            right = right - 1
+            left = left + 1
+        return True
+        
+Start the pointers at two ends and check if the character is alphanumeric. If not, skip a character and then compare it with the other alphanumeric character. 
