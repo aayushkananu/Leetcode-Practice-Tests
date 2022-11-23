@@ -101,4 +101,26 @@ Question: Given an array of integers nums and an integer target, return indices 
                     return [i,j]
 ```        
 
+## 6.   Palindrome Number
+
+Question: Given an integer x, return true if x is a palindrome, and false otherwise.
+
+```bash
+  class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        else:
+            a = x
+            c = 0
+            while x != 0:
+                c = c*10 + x%10
+                x = x//10
+            if a == c:
+                return True
+            else:
+                return False
+
+```        
+
 
