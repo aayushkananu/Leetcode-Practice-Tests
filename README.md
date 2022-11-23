@@ -81,5 +81,6 @@ Question: Given a string s, return true if it is a palindrome, or false otherwis
             right = right - 1
             left = left + 1
         return True
-        
+```        
+
 Start the pointers at two ends and check if the character is alphanumeric. If not, skip a character and then compare it with the other alphanumeric character. 
