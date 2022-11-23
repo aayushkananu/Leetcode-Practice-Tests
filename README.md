@@ -84,3 +84,21 @@ Question: Given a string s, return true if it is a palindrome, or false otherwis
 ```        
 
 Start the pointers at two ends and check if the character is alphanumeric. If not, skip a character and then compare it with the other alphanumeric character. 
+
+## 5.  Two Sum
+
+Question: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+```bash
+  class Solution(object):
+    def twoSum(self, nums, target):
+        length=len(nums)
+        for i in range(0,length):
+            for j in range(i+1,length):
+                num1=nums[i]
+                num2=nums[j]
+                if num1+num2==target:
+                    return [i,j]
+```        
+
+
