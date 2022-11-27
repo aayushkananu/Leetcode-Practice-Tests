@@ -120,7 +120,23 @@ Question: Given an integer x, return true if x is a palindrome, and false otherw
                 return True
             else:
                 return False
-
 ```        
+## 7.   Valid Anagram
+
+Question: Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+```bash
+  class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        a= sorted([x for x in s])
+        b = sorted([y for y in t])
+        if len(a) == len(b):
+            if a==b:
+                return True
+            else: 
+                return False
+        return False
+```        
+
 
 
