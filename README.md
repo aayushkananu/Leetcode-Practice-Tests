@@ -137,6 +137,31 @@ Question: Given two strings s and t, return true if t is an anagram of s, and fa
                 return False
         return False
 ```        
+## 8.   Valid Parenthesis
 
+Question: Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+```bash
+  class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        brackets = {
+            ")" : "(",
+            "}" : "{",
+            "]" : "["            
+        }
+        
+        for char in s:
+            if char in brackets:
+                if stack and stack[-1] == brackets[char]:
+                    stack.pop()
+                else:
+                    return False
+            else:
+                stack.append(char)
+        return True if not stack else False
+        
+
+```        
 
 
