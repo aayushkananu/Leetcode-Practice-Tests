@@ -193,5 +193,32 @@ Question: Given a square matrix mat, return the sum of the matrix diagonals. Onl
                 
         return total_sum
 ```        
+## 10.   Roman to Integer
+
+Question: Given a roman numeral, convert it to an integer.
+
+```bash
+  class Solution:
+    def romanToInt(self, s: str) -> int:
+        roman_integers = {
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
+        }
+        total = 0
+        
+        for i in range(1,len(s)):
+            if roman_integers[s[i-1]] < roman_integers[s[i]]:
+                total = total - roman_integers[s[i-1]]
+            else:
+                total = total + roman_integers[s[i-1]]
+        
+        return total+roman_integers[s[-1]]
+            
+```        
 
 
