@@ -163,5 +163,35 @@ Question: Given a string s containing just the characters '(', ')', '{', '}', '[
         
 
 ```        
+## 9.   Matrix Diagonal Sum
+
+Question: Given a square matrix mat, return the sum of the matrix diagonals. Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
+
+```bash
+  class Solution(object):
+    def diagonalSum(self, mat):      
+        total_sum = 0     
+        
+        for i in range(len(mat)):
+            
+            for j in range(len(mat)):
+                
+                if i == j:
+                    total_sum += mat[i][j]
+                
+        i = 0
+        
+        for j in range(len(mat)-1,-1,-1):
+                
+            if i == j:
+                pass
+
+            else:
+                total_sum += mat[i][j]
+
+            i += 1
+                
+        return total_sum
+```        
 
 
