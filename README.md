@@ -220,5 +220,32 @@ Question: Given a roman numeral, convert it to an integer.
         return total+roman_integers[s[-1]]
             
 ```        
+## 11.  Reverse Integer
+
+Question: Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+
+```bash
+  class Solution:
+    def reverse(self, x: int) -> int:
+        a = ""
+        for i in range(len(str(x))-1,-1, -1):
+            a = a + str(x)[i]
+        
+
+        if x>=0:
+            b = int(a)
+        if x<0:
+            b= int(a[:-1])*-1
+        
+          
+        min = 2 ** 31 * (-1)
+        max = 2 ** 31 - 1
+        
+        if b > max or b < min:
+            return 0
+        return b
+    
+            
+```        
 
 
