@@ -262,5 +262,23 @@ Question: Given an integer array nums, find the subarray which has the largest s
         return maxsubarr
 ```     
 
+## 13.  Longest Common Prefix
+
+Question: Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
+
+```bash
+  class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        res = ""
+
+        for i in range(len(max(strs))):
+            for j in strs:
+                if i == len(j) or j[i] != strs[0][i]:
+                    return res
+            res += strs[0][i] 
+                
+        return res
+```     
+
 
 
