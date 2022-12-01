@@ -243,9 +243,24 @@ Question: Given a signed 32-bit integer x, return x with its digits reversed. If
         
         if b > max or b < min:
             return 0
-        return b
-    
-            
-```        
+        return b    
+```     
+## 12.  Maximum Subarray
+
+Question: Given an integer array nums, find the subarray which has the largest sum and return its sum.
+
+```bash
+  class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        maxsubarr = nums[0]
+        currentsum = 0
+        for n in nums:
+            if currentsum < 0:
+                currentsum = 0
+            currentsum += n
+            maxsubarr = max(maxsubarr, currentsum)
+        return maxsubarr
+```     
+
 
 
