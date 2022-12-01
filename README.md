@@ -279,6 +279,16 @@ Question: Write a function to find the longest common prefix string amongst an a
                 
         return res
 ```     
+## 14.  Length of Last Word
+
+Question: Given a string s consisting of words and spaces, return the length of the last word in the string.
+A word is a maximal substring consisting of non-space characters only.
+
+```bash
+  class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        return len(s.strip().split(" ")[-1])    
+```     
 
 
 
