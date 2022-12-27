@@ -344,5 +344,23 @@ Question: Given an integer array nums, return an array answer such that answer[i
             product = 1
         return arr
 ```     
+## 18.  Product of Array Except Self
 
+Question: Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+
+```bash
+  class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        product = 1
+        arr = []
+        for i in range(len(nums)):
+            x = nums.copy()
+            x.pop(i)
+            for j in x:
+                product = product * j
+            
+            arr.append(product)
+            product = 1
+        return arr
+```     
 
